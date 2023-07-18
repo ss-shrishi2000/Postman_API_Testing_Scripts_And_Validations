@@ -18,3 +18,16 @@ pm.test("Successful POST request", () => {
 pm.test("Status code name has string", () => {
    pm.response.to.have.status("Created");
 });
+
+4> Check that a response header is present:
+
+pm.test("Content-Type header is present", () => {
+  pm.response.to.have.header("Content-Type");
+});
+
+5> Test for a response header having a particular value:
+
+pm.test("Content-Type header is application/json", () => {
+  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');
+});
+
