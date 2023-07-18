@@ -31,3 +31,15 @@ pm.test("Content-Type header is application/json", () => {
   pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');
 });
 
+6> Test if a cookie is present in the Response:
+pm.test("Cookie 'Language' field is present", () => {
+  pm.expect(pm.cookies.has('language')).to.be.true;
+});
+
+7> Test for a particular cookie value:
+
+pm.test("Cookie language has value 1", () => {
+   pm.expect(pm.cookies.get('language')).to.eql('en-gb');
+});
+
+
