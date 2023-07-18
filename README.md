@@ -3,6 +3,8 @@
 ### Testing API Response Codes: 
 
 ![postman_01](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/dae43cc6-fb02-4ae9-a84c-574f1e785253)
+
+
 ![postman_02](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/77212292-dc2e-41d7-9712-f7f8789fbf51)
 
 
@@ -13,3 +15,6 @@
 3. So, we need to verify if the content type is in JSON Format or not.
 4. We can also perform validation on "Connection" field.
 5. We can also perform validation on "Expires" field.
+
+
+![postman_03](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/8e9be22e-659f-47c5-84ef-ca05e34bfdbf)
