@@ -1,0 +1,36 @@
+{
+"students": [
+{
+  "id": 1,
+  "name": "Shrishti",
+  "location": "India",
+  "phone": "6578212131",
+  "courses": [
+     "Java",
+     "Selenium"
+   ]
+},
+{
+  "id": 2,
+  "name": "Kim",
+  "location": "US",
+  "phone": "5464234342",
+  "courses": [
+     "C#",
+     "C++",
+     "Java"
+   ]
+},
+{
+  "id": 3,
+  "name": "Kimberly",
+  "location": "UK",
+  "phone": "7890214342",
+  "courses": [
+     "C#",
+     "C++",
+     "Java"
+   ]
+  }
+ ]
+}
