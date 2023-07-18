@@ -30,10 +30,21 @@
 
 ### Testing Response times:
 
-1. As the response time can also vary depending upon multiple factors, we try to check if the Response time is under a specified time limit.
+1. As the response time can also vary depending on multiple factors, we try to check if the Response time is under a specified time limit.
 
 
 
 ![postman_04](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/b114f1c3-fb36-459f-bf53-524dcd3f1385)
 
+### Testing Response Body:
+
+1. Asserting if the data types of all fields in the JSON File are correct.
+
+
+![postman_05](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/0f07cef1-ba38-44c6-9e74-6c4beef97678)
+
+2. Asserting the array properties: Checking if an Array is empty and if it contains particular items:
+
+`pm.expect(jsonData.courses).to.include("Java");`
+`pm.expect(jsonData.courses).to.have.members(["Java","Selenium"]);`
    
