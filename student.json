@@ -22,6 +22,17 @@
    ]
 },
 {
+  "id": 4,
+  "name": "Jane",
+  "location": "USA",
+  "phone": "9874533211",
+  "courses": [
+    "Scala",
+    "Python",
+    "Java"
+  ]
+},
+{
   "id": 3,
   "name": "Kimberly",
   "location": "UK",
