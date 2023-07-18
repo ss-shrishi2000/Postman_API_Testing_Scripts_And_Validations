@@ -1,0 +1,20 @@
+
+Chai Assertion Statements:-
+
+1> Test for the response status code:
+
+pm.test("Status code is 200", () => {
+  pm.response.to.have.status(200);
+});
+
+2> If you want to test the status code being a value amongst a set of values, include them all in an array and use one amongst them:-
+
+pm.test("Successful POST request", () => {
+   pm.expect(pm.response.code).to.be.oneOf([201, 202]);
+});
+
+3> Check the status code text:
+
+pm.test("Status code name has string", () => {
+   pm.response.to.have.status("Created");
+});
