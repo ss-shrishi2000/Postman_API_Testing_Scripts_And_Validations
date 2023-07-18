@@ -24,3 +24,10 @@
 
 1. One issue of testing the cookies is that they are prone to change dynamically or their values keep on changing.
 2. But there are some cookies whose value won't change each time dynamically. So we can validate those cookies.
+
+3. Assertion => `pm.expect(pm.cookies.has('language')).to.be.true;`
+4. Assertion => `pm.expect(pm.cookies.get('language')).to.eql('en-gb');`
+
+### Testing Response times:
+
+1. 
