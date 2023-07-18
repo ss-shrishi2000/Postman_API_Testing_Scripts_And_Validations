@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "students": [
+    {
+      "id": 1,
+      "name": "Shrishti",
+      "location": "India",
+      "phone": "6578212131",
+      "courses": [
+        "Java",
+        "Selenium"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Kim",
+      "location": "US",
+      "phone": "5464234342",
+      "courses": [
+        "C#",
+        "C++",
+        "Java"
+      ]
+    },
+    {
+      "name": "Scott Behance",
+      "location": "Venice",
+      "phone": "6290762640",
+      "courses": [
+        "C",
+        "C++",
+        "Java"
+      ],
+      "id": 3
+    }
+  ]
+}
