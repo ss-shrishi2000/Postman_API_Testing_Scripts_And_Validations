@@ -56,3 +56,6 @@
 1. The values that are present in the respective fields in Response in the JSON Data file can also be validated:
  `pm.expect(jsonData.id).to.eql(1);`
 
+![postman_07](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/dcb4b159-b350-467b-9951-75ac3881593e)
+
+
