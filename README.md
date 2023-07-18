@@ -51,4 +51,8 @@
 
 ![postman_06](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/cdae2813-3ece-417a-b6af-3916c5baf012)
 
-   
+#### Validating JSON Fields in Response:
+
+1. The values that are present in the respective fields in Response in the JSON Data file can also be validated:
+ `pm.expect(jsonData.id).to.eql(1);`
+
