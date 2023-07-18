@@ -18,3 +18,9 @@
 
 
 ![postman_03](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/8e9be22e-659f-47c5-84ef-ca05e34bfdbf)
+
+
+### Testing Cookies:
+
+1. One issue of testing the cookies is that they are prone to change dynamically or their values keep on changing.
+2. But there are some cookies whose value won't change each time dynamically. So we can validate those cookies.
