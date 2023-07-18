@@ -47,4 +47,8 @@
 
 `pm.expect(jsonData.courses).to.include("Java");`
 `pm.expect(jsonData.courses).to.have.members(["Java","Selenium"]);`
+
+
+![postman_06](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/cdae2813-3ece-417a-b6af-3916c5baf012)
+
    
