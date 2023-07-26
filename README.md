@@ -63,6 +63,8 @@
 
 ![postman_08](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/3e1a2593-b727-4e67-89aa-b659cf8039bb)
 
+![postman_09](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/bd48fa67-ca87-47a7-a7ad-1d219811a0ca)
+
 
 
 
