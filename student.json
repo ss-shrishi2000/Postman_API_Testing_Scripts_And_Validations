@@ -33,6 +33,22 @@
   ]
 },
 {
+  "id": 5,
+  "errors": [],
+  "areas": ["goods", "services"],
+  "phone": "6578212131",
+  "settings": [
+    {
+      "type": "notification",
+      "detail": [ "email", "sms" ]
+    },
+    {
+      "type": "visual",
+      "detail": [ "light", "large" ]
+    }
+  ]
+},
+{
   "id": 3,
   "name": "Kimberly",
   "location": "UK",
