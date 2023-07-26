@@ -59,3 +59,11 @@
 ![postman_07](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/dcb4b159-b350-467b-9951-75ac3881593e)
 
 
+### Testing the Pre-Request Scripts along with the Test Scripts at the Collection, Folder, and Request Level as well:
+
+![postman_08](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/3e1a2593-b727-4e67-89aa-b659cf8039bb)
+
+
+
+
+
