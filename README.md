@@ -66,6 +66,17 @@
 ![postman_09](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/bd48fa67-ca87-47a7-a7ad-1d219811a0ca)
 
 
+### API Chaining Concept:
+
+When we use the Response obtained from an API obtained as a result of some Request sent by the user; as the Request for another/next API; then that is termed as Chaining.
+
+#### Request1 => API => Response1 => (Response1 = Request2) => Request2 => API2 => Response2
+ Here; the  Response obtained from API1 is sent as a  Request for API2
+
+![postman_10](https://github.com/ss-shrishi2000/Postman_API_Testing_Scripts_And_Validations/assets/65821403/eac6d76f-8c42-4741-80ba-268bd4abeece)
 
 
+
+
+ 
 
