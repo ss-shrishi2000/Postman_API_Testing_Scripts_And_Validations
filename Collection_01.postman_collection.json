@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "f828924c-eb51-4c05-a06b-cefec146376d",
+		"name": "Collection_01",
+		"description": "API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28518585"
+	},
+	"item": [
+		{
+			"name": "Folder_01",
+			"item": [
+				{
+					"name": "GET_01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Content-Type header is present\", () => {\r",
+									"  pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Connection is keep-alive\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Connection')).to.eql('keep-alive');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"Ran Pre-Request Script at Request Level Successfully\");\r",
+									"pm.variables.set(\"name\",\"Shrishti Singh\");\r",
+									"pm.variables.set(\"age\",\"29\");\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_collection}}student/2",
+							"host": [
+								"{{url_collection}}student"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_02",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful POST request\", () => {\r",
+									"   pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_global}}student/1",
+							"host": [
+								"{{url_global}}student"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_03",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Testing Response time to be less than 100 ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(100);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_global}}student/3",
+							"host": [
+								"{{url_global}}student"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_04",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"pm.test(\"Testing the Response Body\", () => {\r",
+									"    pm.expect(jsonData).to.be.an(\"object\");\r",
+									"    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+									"    pm.expect(jsonData.location).to.be.a(\"string\");\r",
+									"    pm.expect(jsonData.phone).to.be.a(\"string\");\r",
+									"    pm.expect(jsonData.courses).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Testing Array Properties\", () => {\r",
+									"    pm.expect(jsonData.courses).to.include(\"Java\");\r",
+									"    pm.expect(jsonData.courses).to.include.members([\"Java\", \"C++\"]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Testing the value of the Array Properties\", () => {\r",
+									"    pm.expect(jsonData.id).to.eq(2);\r",
+									"    pm.expect(jsonData.name).to.eql(\"Kim\");\r",
+									"    pm.expect(jsonData.location).to.eql(\"US\");\r",
+									"    pm.expect(jsonData.phone).to.eql(\"5464234342\");\r",
+									"    pm.expect(jsonData.courses[0]).to.eql(\"C#\");\r",
+									"    pm.expect(jsonData.courses[1]).to.eql(\"C++\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_global}}student/2",
+							"host": [
+								"{{url_global}}student"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_05",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"pm.test(\"Test array properties\", () => {\r",
+									"  pm.expect(jsonData.errors).to.be.empty;\r",
+									"  pm.expect(jsonData.areas).to.include(\"goods\");\r",
+									"    //get the notification settings object\r",
+									"  const notificationSettings = jsonData.settings.find\r",
+									"      (m => m.type === \"notification\");\r",
+									"  pm.expect(notificationSettings).to.be.an(\"object\", \"Could not find the setting\");\r",
+									"  pm.expect(notificationSettings.detail).to.include(\"sms\");\r",
+									"    //detail array must include all listed\r",
+									"  pm.expect(notificationSettings.detail).to.have.members([\"email\", \"sms\"]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_global}}student/5",
+							"host": [
+								"{{url_global}}student"
+							],
+							"path": [
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Adding test scripts for practise towards API Testing",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Ran Pre-request script at Folder level successfully\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Ran Test Scripts at Folder Level Successfully\");",
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"Ran Pre-Request Script at Collection Level Successfully\");",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"Ran Test Script at Collection Level Successfully\");",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_collection",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		},
+		{
+			"key": "employeeId",
+			"value": ""
+		}
+	]
+}
